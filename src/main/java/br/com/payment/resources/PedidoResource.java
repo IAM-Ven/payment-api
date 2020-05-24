@@ -1,4 +1,4 @@
-package br.com.payment.resource;
+package br.com.payment.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
