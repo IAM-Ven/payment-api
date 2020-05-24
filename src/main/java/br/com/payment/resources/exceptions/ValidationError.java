@@ -1,4 +1,4 @@
-package br.com.payment.resource.exceptions;
+package br.com.payment.resources.exceptions;
 
 import java.util.ArrayList;
 import java.util.List;

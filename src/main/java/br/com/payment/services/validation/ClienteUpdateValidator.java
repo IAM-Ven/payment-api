@@ -14,7 +14,7 @@ import org.springframework.web.servlet.HandlerMapping;
 import br.com.payment.domain.Cliente;
 import br.com.payment.dto.ClienteDTO;
 import br.com.payment.repositories.ClienteRepository;
-import br.com.payment.resource.exceptions.FieldMessage;
+import br.com.payment.resources.exceptions.FieldMessage;
 
 public class ClienteUpdateValidator implements ConstraintValidator<ClienteUpdate, ClienteDTO> {
 
