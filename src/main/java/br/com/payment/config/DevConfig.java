@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 import br.com.payment.services.DBService;
+import br.com.payment.services.EmailService;
+import br.com.payment.services.SmtpEmailService;
 
 /**
  * Configurações específicas para o profile dev
@@ -35,6 +37,11 @@ public class DevConfig {
 
 		dbService.instantiateTestDatabase();
 		return true;
+	}
+	
+	@Bean
+	public EmailService emailService() {
+		return new SmtpEmailService();
 	}
 
 }
