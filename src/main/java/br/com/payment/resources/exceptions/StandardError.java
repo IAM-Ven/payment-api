@@ -3,20 +3,34 @@ package br.com.payment.resources.exceptions;
 import java.io.Serializable;
 
 public class StandardError implements Serializable {
-	
+
 	private static final long serialVersionUID = 3477147649229741574L;
+
+	private Long timestamp;
 
 	private Integer status;
 
-	private String msg;
+	private String error;
 
-	private Long time;
+	private String message;
 
-	public StandardError(Integer status, String msg, Long time) {
+	private String path;
+
+	public StandardError(Long timestamp, Integer status, String error, String message, String path) {
 		super();
+		this.timestamp = timestamp;
 		this.status = status;
-		this.msg = msg;
-		this.time = time;
+		this.error = error;
+		this.message = message;
+		this.path = path;
+	}
+
+	public Long getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Long timestamp) {
+		this.timestamp = timestamp;
 	}
 
 	public Integer getStatus() {
@@ -27,20 +41,28 @@ public class StandardError implements Serializable {
 		this.status = status;
 	}
 
-	public String getMsg() {
-		return msg;
+	public String getError() {
+		return error;
 	}
 
-	public void setMsg(String msg) {
-		this.msg = msg;
+	public void setError(String error) {
+		this.error = error;
 	}
 
-	public Long getTime() {
-		return time;
+	public String getMessage() {
+		return message;
 	}
 
-	public void setTime(Long time) {
-		this.time = time;
+	public void setMessage(String message) {
+		this.message = message;
+	}
+
+	public String getPath() {
+		return path;
+	}
+
+	public void setPath(String path) {
+		this.path = path;
 	}
 
 }
